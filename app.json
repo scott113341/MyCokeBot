@@ -19,5 +19,6 @@
     "TWILIO_AUTH_TOKEN": {
       "description": "Your Twilio account auth token."
     }
-  }
+  },
+  "image": "aheuermann/electron"
 }
