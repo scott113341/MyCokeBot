@@ -14,10 +14,10 @@
       "description": "Your My Coke Rewards email address."
     },
     "TWILIO_ACCOUNT_SID": {
-      "description": "Your Twilio."
+      "description": "Your Twilio account SID."
     },
     "TWILIO_AUTH_TOKEN": {
-      "description": "Your My Coke Rewards email address."
+      "description": "Your Twilio account auth token."
     }
   }
 }
