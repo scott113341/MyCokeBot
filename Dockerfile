@@ -24,6 +24,4 @@ RUN apt-get install -y \
   gcc-multilib \
   g++-multilib
 
-ENV DEBUG="nightmare"
-
 CMD xvfb-run -e meow --server-args="-screen 0 1024x768x24" npm start
