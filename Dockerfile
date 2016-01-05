@@ -1,5 +1,6 @@
 FROM heroku/nodejs
 
+RUN apt-get update
 RUN apt-get install -y \
   xvfb \
   x11-xkb-utils \
@@ -24,7 +25,3 @@ RUN apt-get install -y \
   g++-multilib
 
 ENV DEBUG="nightmare"
-
-# Set current working directory as /app
-WORKDIR /app
-CMD xvfb-run --server-args="-screen 0 1024x768x24" npm start
