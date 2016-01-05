@@ -20,5 +20,5 @@
       "description": "Your Twilio account auth token."
     }
   },
-  "image": "aheuermann/electron"
+  "image": "heroku/nodejs"
 }
