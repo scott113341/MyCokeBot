@@ -1,0 +1,4 @@
+#!/bin/sh
+
+echo "Self buildpack"
+exit 0

@@ -22,7 +22,7 @@
   },
   "buildpacks": [
     { "url": "https://github.com/ddollar/heroku-buildpack-apt" },
-    { "url": "https://github.com/captain401/heroku-buildpack-xvfb" },
+    { "url": "https://github.com/kr/heroku-buildpack-inline" },
     { "url": "https://github.com/heroku/heroku-buildpack-nodejs" }
   ]
 }
