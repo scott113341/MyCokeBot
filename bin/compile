@@ -16,3 +16,8 @@ ln -s /app/.apt/usr/share/fonts $1/usr-s-fonts
 export PATH="$PATH:$1/.apt/usr/bin"
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$1/.apt/usr/lib:$1/.apt/usr/lib/x86_64-linux-gnu"
 find $1/.apt/usr/share/fonts/X11 -type d | xargs $1/.apt/usr/bin/mkfontdir
+
+# install vim
+curl https://s3.amazonaws.com/heroku-jvm-buildpack-vi/vim-7.3.tar.gz --output vim.tar.gz
+mkdir vim && tar xzvf vim.tar.gz -C vim
+export PATH=$PATH:/app/vim/bin

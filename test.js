@@ -1,17 +1,17 @@
 var Nightmare = require('nightmare');
+var vo = require('vo');
 
-async function run() {
+vo(run)(function(err, result) {
+  if (err) throw err;
+});
+
+function *run() {
   var nightmare = Nightmare();
-  console.log('started nightmare');
-
-
-  await nightmare.goto('http://cnn.com');
-  console.log('went to cnn');
-  var title = await nightmare.evaluate(function() {
+  var title = yield nightmare
+    .goto('http://cnn.com')
+    .evaluate(function() {
       return document.title;
     });
   console.log(title);
-  await nightmare.end();
+  yield nightmare.end();
 }
-
-run();
