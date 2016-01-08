@@ -1,17 +1,13 @@
 {
   "name": "MyCokeBot",
   "description": "Web application to automate submission of My Coke Rewards codes.",
-  "keywords": [
-    "My Coke Rewards",
-    "cap"
-  ],
   "repository": "https://github.com/scott113341/MyCokeBot",
   "env": {
     "MCR_EMAIL": {
       "description": "Your My Coke Rewards email address."
     },
     "MCR_PASSWORD": {
-      "description": "Your My Coke Rewards email address."
+      "description": "Your My Coke Rewards password."
     },
     "TWILIO_ACCOUNT_SID": {
       "description": "Your Twilio account SID."
