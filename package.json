@@ -4,7 +4,7 @@
   "description": "Web application to automate submission of My Coke Rewards codes.",
   "main": "index.js",
   "engines": {
-    "node": "5.3.0"
+    "node": "5.4.0"
   },
   "scripts": {
     "start": "babel-node index.js"
