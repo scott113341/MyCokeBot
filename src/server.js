@@ -1,10 +1,11 @@
 import bodyParser from 'body-parser';
 import express from 'express';
 
-import * as bot from './bot';
-import * as util from './util';
+import * as bot from './bot.js';
+import * as util from './util.js';
 
 
+const ENV = process.env;
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -24,6 +25,15 @@ app.post('/', (req, res) => {
 });
 
 
-app.listen(process.env.PORT, () => {
+app.get('/code/:code', (req, res) => {
+  const code = util.parseCode(req.params.code);
+  res.send({ code });
+
+  console.log('redeeming code', code);
+  bot.run(code, req.body);
+});
+
+
+app.listen(ENV.PORT, () => {
   console.log('server up');
 });

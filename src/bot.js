@@ -2,8 +2,8 @@ import Nightmare from 'nightmare';
 import twilio from 'twilio';
 
 
-const env = process.env;
-const twilioClient = twilio(env.TWILIO_ACCOUNT_SID, env.TWILIO_AUTH_TOKEN);
+const ENV = process.env;
+const twilioClient = twilio(ENV.TWILIO_ACCOUNT_SID, ENV.TWILIO_AUTH_TOKEN);
 const WAIT = 1200;
 
 
@@ -24,10 +24,8 @@ export async function enterCode(code) {
 
     await nightmare
       .goto('https://www.mycokerewards.com/account/authenticate')
-      .type('#capture_signIn_traditionalSignIn_emailAddress', env.MCR_EMAIL)
-      .wait(WAIT)
-      .type('#capture_signIn_traditionalSignIn_password', env.MCR_PASSWORD)
-      .wait(WAIT)
+      .type('#capture_signIn_traditionalSignIn_emailAddress', ENV.MCR_EMAIL)
+      .type('#capture_signIn_traditionalSignIn_password', ENV.MCR_PASSWORD)
       .click('#capture_signIn_traditionalSignIn_signInButton')
       .wait(WAIT)
       .click('#h-statusBar')

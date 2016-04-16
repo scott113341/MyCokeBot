@@ -10,7 +10,7 @@
     "npm": "3.8.3"
   },
   "scripts": {
-    "start": "babel-node index.js"
+    "start": "DEBUG=nightmare babel-node src/index.js"
   },
   "dependencies": {
     "babel": "6.5.2",
